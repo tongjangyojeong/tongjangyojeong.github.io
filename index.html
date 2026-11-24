@@ -3,36 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>통장요정 — 계산기처럼 쉬운 가계부</title>
-<meta name="description" content="금액 누르고 카테고리 톡! 카드 결제는 알아서 모아 주는 가계부, 통장요정.">
-<meta property="og:title" content="통장요정 🧚 계산기처럼 쉬운 가계부">
-<meta property="og:description" content="금액 누르고 카테고리 톡! 안드로이드는 무료 다운로드, 아이폰은 웹으로 바로 체험">
+<title>머니집사 · 통장요정 — 계산기처럼 쉬운 가계부</title>
+<meta name="description" content="금액 누르고 카테고리 톡! 집사 돼지 머니집사, 요정 돼지 통장요정 중 마음에 드는 모습으로 받으세요.">
+<meta property="og:title" content="머니집사 🎩 · 통장요정 🧚 계산기처럼 쉬운 가계부">
+<meta property="og:description" content="같은 앱, 모습만 두 가지. 안드로이드는 무료 다운로드, 아이폰은 웹으로 바로 체험">
 <meta property="og:image" content="https://tongjangyojeong.github.io/img/icon.png">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#FF9EBB">
+<meta name="theme-color" content="#FBFAF2">
 <link rel="icon" href="favicon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-  :root { --bg:#FFF6F0; --ink:#3A2A33; --sub:#6F5562; --pink:#FF6F98; --hero:#FF9EBB; --soft:#FFE3EC; --butter:#FFD84D; --line:#3A2A33; }
+  :root { --bg:#FBFAF2; --ink:#111111; --sub:#55554A; --line:#111111; --lime:#D9F24A; --limesoft:#EEF6C2; --rose:#FFD3DF; --rosesoft:#FFE1E9; --plum:#3A2A33; }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink); font-family:Pretendard, -apple-system, "Apple SD Gothic Neo", sans-serif; line-height:1.55; }
-  main { max-width:520px; margin:0 auto; padding:28px 18px 48px; }
+  main { max-width:560px; margin:0 auto; padding:28px 16px 48px; }
   .card { background:#fff; border:2.5px solid var(--line); border-radius:22px; padding:20px; margin-top:16px; }
-  .hero { text-align:center; padding-top:8px; }
-  .icon { width:112px; height:112px; border-radius:28px; border:3px solid var(--line); box-shadow:0 5px 0 var(--line); }
-  h1 { font-size:34px; margin:16px 0 4px; letter-spacing:-0.5px; }
-  .tag { font-size:17px; color:var(--sub); font-weight:600; margin:0; }
-  .btn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:17px; margin-top:22px;
-         background:var(--pink); color:#fff; font-size:20px; font-weight:800; text-decoration:none;
-         border:3px solid var(--line); border-radius:999px; box-shadow:0 5px 0 var(--line); }
-  .btn:active { transform:translateY(3px); box-shadow:0 2px 0 var(--line); }
-  .btn2 { background:#fff; color:var(--ink); font-size:18px; margin-top:14px; }
-  .meta { font-size:13px; color:var(--sub); margin-top:10px; text-align:center; }
-  .ios { margin-top:12px; padding:12px 14px; background:var(--soft); border:2px solid var(--line); border-radius:16px; font-size:14px; font-weight:600; text-align:center; }
-  .shots { display:flex; gap:10px; overflow-x:auto; margin-top:22px; padding-bottom:8px; scroll-snap-type:x mandatory; }
+  .top { text-align:center; }
+  .top h1 { font-size:30px; margin:4px 0 2px; letter-spacing:-0.5px; }
+  .top p { margin:0; color:var(--sub); font-weight:600; font-size:16px; }
+  .pick { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:22px; }
+  .opt { border:2.5px solid var(--line); border-radius:22px; padding:16px 12px 14px; text-align:center; display:flex; flex-direction:column; align-items:center; }
+  .opt.a { background:var(--limesoft); }
+  .opt.b { background:var(--rosesoft); border-color:var(--plum); color:var(--plum); }
+  .opt img.icon { width:84px; height:84px; border-radius:22px; border:3px solid currentColor; }
+  .opt h2 { font-size:22px; margin:10px 0 0; }
+  .opt .who { font-size:13.5px; font-weight:600; opacity:.75; margin:0; }
+  .opt .say { font-size:13.5px; margin:8px 0 0; min-height:42px; }
+  .btn { display:flex; align-items:center; justify-content:center; gap:6px; width:100%; padding:13px 6px; margin-top:12px;
+         font-size:16px; font-weight:800; text-decoration:none; white-space:nowrap; border:2.5px solid currentColor; border-radius:999px; }
+  .a .btn { background:var(--lime); color:var(--ink); box-shadow:0 4px 0 var(--ink); }
+  .b .btn { background:var(--plum); color:#fff; border-color:var(--plum); }
+  .btn:active { transform:translateY(2px); }
+  .btn2 { display:block; margin-top:10px; font-size:14px; font-weight:700; color:inherit; }
+  .meta { font-size:13px; color:var(--sub); margin-top:12px; text-align:center; }
+  .note { margin-top:14px; padding:12px 14px; background:#fff; border:2px solid var(--line); border-radius:16px; font-size:14px; font-weight:600; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-top:24px; }
+  .tabs button { flex:1; padding:10px; font:inherit; font-weight:800; font-size:15px; border:2.5px solid var(--line); border-radius:999px; background:#fff; color:var(--ink); cursor:pointer; }
+  .tabs button[aria-selected="true"].a { background:var(--lime); }
+  .tabs button[aria-selected="true"].b { background:var(--plum); border-color:var(--plum); color:#fff; }
+  .shots { display:flex; gap:10px; overflow-x:auto; margin-top:12px; padding-bottom:8px; scroll-snap-type:x mandatory; }
+  .shots[hidden] { display:none; }
   .shots img { width:62%; flex:none; border:2.5px solid var(--line); border-radius:22px; scroll-snap-align:center; background:#fff; }
-  h2 { font-size:21px; margin:0 0 12px; }
-  .feat { display:flex; gap:12px; align-items:flex-start; padding:10px 0; border-top:1.5px dashed #E8D3DB; }
+  h3 { font-size:21px; margin:0 0 12px; }
+  .feat { display:flex; gap:12px; align-items:flex-start; padding:10px 0; border-top:1.5px dashed #DCDDC8; }
   .feat:first-of-type { border-top:none; }
   .feat .e { font-size:26px; width:36px; text-align:center; flex:none; }
   .feat b { display:block; font-size:16px; }
@@ -40,54 +53,68 @@
   ol { margin:0; padding-left:22px; }
   ol li { margin:8px 0; font-size:15.5px; }
   ol li small { display:block; color:var(--sub); font-size:13.5px; }
-  .safe { background:#DDF3E6; }
-  .fairy { display:flex; gap:10px; align-items:center; margin-top:20px; padding:14px; background:var(--hero); border:2.5px solid var(--line); border-radius:20px; font-weight:700; }
-  .fairy img { width:72px; flex:none; }
+  .safe { background:var(--limesoft); }
   footer { text-align:center; color:var(--sub); font-size:12.5px; margin-top:28px; }
+  @media (max-width:360px) { .pick { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
 <main>
-  <section class="hero">
-    <img class="icon" src="img/icon.png" alt="통장요정 아이콘">
-    <h1>통장요정</h1>
-    <p class="tag">계산기처럼 쉬운 가계부</p>
-
-    <a class="btn" href="tongjang-yojeong.apk" download>
-      <span>⬇️</span><span>안드로이드 무료 다운로드</span>
-    </a>
-    <p class="meta">버전 1.0 · 28MB · 안드로이드 7.0 이상 (갤럭시 등)</p>
-    <a class="btn btn2" href="demo/">
-      <span>🍎</span><span>아이폰 · PC는 웹으로 체험하기</span>
-    </a>
-    <p class="meta">설치 없이 바로 열려요 · 체험용 예시 기록이 들어 있어요<br>
-      Safari [공유] → <b>홈 화면에 추가</b>를 누르면 앱처럼 쓸 수 있어요</p>
-    <div class="ios">💡 웹 체험판은 카드 결제 알림 자동 기록이 안 돼요 (아이폰 정책)<br>기록은 이 기기의 브라우저에만 저장돼요</div>
+  <section class="top">
+    <h1>계산기처럼 쉬운 가계부</h1>
+    <p>같은 앱이에요. 마음에 드는 모습으로 골라 받으세요!</p>
   </section>
 
-  <div class="fairy">
-    <img src="img/fairy.png" alt="">
-    <div>"쓴 돈을 기록해 주면 이번 달에 얼마 남았는지 내가 알려 줄게!"</div>
-  </div>
+  <section class="pick">
+    <div class="opt a">
+      <img class="icon" src="img/icon-butler.png" alt="머니집사 아이콘">
+      <h2>머니집사</h2>
+      <p class="who">집사 돼지 🎩</p>
+      <p class="say">"예산은 제가 관리하겠습니다, 주인님"</p>
+      <a class="btn" href="moneyjipsa.apk" download="머니집사.apk">⬇️ 안드로이드</a>
+      <a class="btn2" href="demo/">🍎 아이폰은 웹 체험</a>
+    </div>
+    <div class="opt b">
+      <img class="icon" src="img/icon-fairy.png" alt="통장요정 아이콘">
+      <h2>통장요정</h2>
+      <p class="who">요정 돼지 🧚</p>
+      <p class="say">"쓴 돈 기록해 주면 남은 돈 알려 줄게!"</p>
+      <a class="btn" href="tongjang-yojeong.apk" download="통장요정.apk">⬇️ 안드로이드</a>
+      <a class="btn2" href="demo-yojeong/">🍎 아이폰은 웹 체험</a>
+    </div>
+  </section>
+  <p class="meta">버전 1.0 · 28MB · 안드로이드 7.0 이상 (갤럭시 등)</p>
 
-  <div class="shots" aria-label="앱 화면">
-    <img src="img/s1.jpg" alt="기록 화면: 목표까지 남은 돈과 수입·지출">
-    <img src="img/s2.jpg" alt="기록하기 화면: 금액과 카테고리 격자">
-    <img src="img/s3.jpg" alt="결제 대기함 화면">
+  <div class="note">🔄 폰에는 하나만 깔려요. 다른 쪽을 설치하면 기록은 그대로 두고 모습만 바뀌어요.</div>
+  <div class="note">💡 웹 체험판은 결제 알림 자동 기록이 안 돼요. Safari [공유] → <b>홈 화면에 추가</b>하면 앱처럼 쓸 수 있어요</div>
+
+  <div class="tabs" role="tablist" aria-label="앱 화면 보기">
+    <button class="a" role="tab" aria-selected="true" data-show="shots-a">머니집사 화면</button>
+    <button class="b" role="tab" aria-selected="false" data-show="shots-b">통장요정 화면</button>
+  </div>
+  <div class="shots" id="shots-a" aria-label="머니집사 앱 화면">
+    <img src="img/b1.jpg" alt="기록 화면: 이번 달 남은 돈과 수입·지출">
+    <img src="img/b2.jpg" alt="결제 대기함 화면: 날짜별로 모아 한 번에 정리">
+    <img src="img/b3.jpg" alt="리포트 화면: 카테고리별 지출">
+  </div>
+  <div class="shots" id="shots-b" aria-label="통장요정 앱 화면" hidden>
+    <img src="img/f1.jpg" alt="기록 화면: 이번 달 남은 돈과 수입·지출">
+    <img src="img/f2.jpg" alt="결제 대기함 화면: 날짜별로 모아 한 번에 정리">
+    <img src="img/f3.jpg" alt="리포트 화면: 카테고리별 지출">
   </div>
 
   <section class="card">
-    <h2>이런 게 돼요</h2>
+    <h3>이런 게 돼요</h3>
     <div class="feat"><div class="e">🧮</div><div><b>금액 누르고 카테고리 톡</b><span>계산기처럼 숫자만 누르면 끝. 메모도 적을 수 있어요.</span></div></div>
-    <div class="feat"><div class="e">💳</div><div><b>카드 결제는 알아서 모아요</b><span>결제 알림을 읽어 대기함에 쌓아 줘요. 여러 건도 한 번에 정리.</span></div></div>
-    <div class="feat"><div class="e">🎯</div><div><b>목표를 정하면 요정이 지켜 줘요</b><span>"96,500원 남았어! 하루 10,722원씩 쓰면 딱 맞아요"</span></div></div>
+    <div class="feat"><div class="e">💳</div><div><b>카드 결제는 알아서 모아요</b><span>결제 알림을 읽어 대기함에 쌓아 줘요. 자기 전에 하루·일주일·한 달 치를 한 번에 합쳐서 정리.</span></div></div>
+    <div class="feat"><div class="e">🎯</div><div><b>목표를 정하면 남은 돈을 알려 줘요</b><span>"96,500원 남았어요. 하루 10,722원씩 쓰면 딱 맞아요"</span></div></div>
     <div class="feat"><div class="e">🗓️</div><div><b>매달 나가는 돈은 자동으로</b><span>월세·통신비·구독, 날짜가 되면 알아서 기록해요.</span></div></div>
   </section>
 
   <section class="card">
-    <h2>설치 방법 (1분)</h2>
+    <h3>설치 방법 (1분)</h3>
     <ol>
-      <li>위의 <b>[안드로이드 무료 다운로드]</b>를 눌러요.</li>
+      <li>마음에 드는 쪽의 <b>[⬇️ 안드로이드]</b>를 눌러요.</li>
       <li>받은 파일을 누르고 <b>"출처를 알 수 없는 앱 허용"</b>을 켜요.
         <small>인터넷 앱(크롬·삼성 인터넷)에서 한 번만 허용하면 돼요.</small></li>
       <li><b>설치</b>를 눌러요.
@@ -96,7 +123,7 @@
   </section>
 
   <section class="card safe">
-    <h2>🔒 내 기록은 내 폰에만</h2>
+    <h3>🔒 내 기록은 내 폰에만</h3>
     <ol style="list-style:none;padding:0">
       <li>✔️ 회원가입·로그인 없음, 서버 없음</li>
       <li>✔️ 은행 연결 없음 — 결제 알림의 금액과 가게 이름만 읽어요</li>
@@ -104,7 +131,18 @@
     </ol>
   </section>
 
-  <footer>© 통장요정 · 문의는 인스타그램 DM으로 주세요</footer>
+  <footer>© 머니집사 · 통장요정 · 문의는 인스타그램 DM으로 주세요</footer>
 </main>
+<script>
+  document.querySelectorAll('.tabs button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.tabs button').forEach(function (x) {
+        var on = x === b;
+        x.setAttribute('aria-selected', on);
+        document.getElementById(x.dataset.show).hidden = !on;
+      });
+    });
+  });
+</script>
 </body>
 </html>

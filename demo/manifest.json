@@ -1,11 +1,11 @@
 {
-    "name": "통장요정",
-    "short_name": "통장요정",
+    "name": "머니집사",
+    "short_name": "머니집사",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#D9F24A",
+    "theme_color": "#D9F24A",
+    "description": "계산기처럼 쉬운 가계부, 머니집사",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
