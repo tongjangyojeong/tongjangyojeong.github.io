@@ -56,6 +56,13 @@
   ol li { margin:8px 0; font-size:var(--fs-m); }
   ol li small { display:block; color:var(--sub); font-size:var(--fs-s); }
   .safe { background:var(--limesoft); }
+  .note.alert { display:block; background:#FFF4D6; color:var(--ink); text-decoration:none; }
+  .warn { background:#FFF9E8; scroll-margin-top:12px; }
+  .warn .why { margin:10px 0 6px; font-size:var(--fs-s); color:var(--sub); }
+  .mock { background:#3A3A3E; color:#fff; border-radius:18px; padding:16px 14px 12px; text-align:center; max-width:280px; margin:6px auto 4px; }
+  .mock-t { font-size:var(--fs-m); font-weight:700; }
+  .mock-b { margin-top:12px; background:#9DBBF7; color:#1B2A4A; border-radius:999px; padding:7px; font-weight:800; font-size:var(--fs-s); }
+  ol li.again b { color:#C2410C; }
   footer { text-align:center; color:var(--sub); font-size:var(--fs-xs); margin-top:28px; }
   @media (max-width:360px) { .pick { grid-template-columns:1fr; } }
 </style>
@@ -87,6 +94,7 @@
   </section>
   <p class="meta">버전 1.0 · 28MB · 안드로이드 7.0 이상 (갤럭시 등)</p>
 
+  <a class="note alert" href="#blocked">🛡️ 설치할 때 <b>"앱 차단됨"</b> 창이 뜨나요? <u>이렇게 하면 돼요 →</u></a>
   <div class="note">🔄 폰에는 하나만 깔려요. 다른 쪽을 설치하면 기록은 그대로 두고 모습만 바뀌어요.</div>
   <div class="note">💡 웹 체험판은 결제 알림 자동 기록이 안 돼요. Safari [공유] → <b>홈 화면에 추가</b>하면 앱처럼 쓸 수 있어요</div>
 
@@ -120,7 +128,24 @@
       <li>받은 파일을 누르고 <b>"출처를 알 수 없는 앱 허용"</b>을 켜요.
         <small>인터넷 앱(크롬·삼성 인터넷)에서 한 번만 허용하면 돼요.</small></li>
       <li><b>설치</b>를 눌러요.
-        <small>"Play 프로텍트" 안내가 뜨면 [무시하고 설치]를 누르세요. 스토어에 아직 안 올린 앱이라 뜨는 거예요.</small></li>
+        <small>"기기 보호를 위해 앱 차단됨" 창이 뜨면 <a href="#blocked">아래 방법</a>대로 해 주세요.</small></li>
+    </ol>
+  </section>
+
+  <section class="card warn" id="blocked">
+    <h3>🛡️ "앱 차단됨" 창이 뜨면</h3>
+    <div class="mock" aria-hidden="true">
+      <div class="mock-t">기기 보호를 위해 앱 차단됨</div>
+      <div class="mock-b">확인</div>
+    </div>
+    <p class="why">고장이 아니에요. 결제 알림을 읽는 앱이라, 구글이 <b>스토어 밖에서 받은 앱</b>을 한 번 더 막는 거예요. 아래처럼 잠깐만 꺼 주세요.</p>
+    <ol>
+      <li><b>[확인]</b>을 눌러 창을 닫아요.</li>
+      <li><b>Play 스토어</b> 앱 → 오른쪽 위 <b>내 프로필 사진</b> → <b>Play 프로텍트</b></li>
+      <li>오른쪽 위 <b>⚙️</b> → <b>"Play 프로텍트로 앱 검사"</b>를 꺼요.</li>
+      <li>다운로드한 파일을 다시 눌러 <b>설치</b>해요.</li>
+      <li class="again">설치가 끝나면 <b>같은 곳에서 다시 켜 주세요!</b>
+        <small>다시 켜도 설치한 앱은 그대로 잘 돼요.</small></li>
     </ol>
   </section>
 
